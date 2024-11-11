@@ -13,10 +13,10 @@ pipeline {
             steps {
                 script {
                     deploy adapters: [
-                        tomcat9(
+                        tomcat10(
                             credentialsId: 'tomcat_credential',
                             path: '',
-                            url: 'http://localhost:8080'  // Ajustez l'URL selon votre configuration
+                            url: 'http://localhost:8081/'
                         )
                     ],
                     contextPath: '/pipeline',
